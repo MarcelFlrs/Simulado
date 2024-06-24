@@ -9,6 +9,10 @@ public class Programa {
     public static void main(String[] args) {
         GerenciadorDeArquivos gArquivos = new GerenciadorDeArquivos();
         List<Pessoa> pessoasComEnderecos = gArquivos.combinarPessoasEEnderecos();
-        gArquivos.gravarPessoaComEndereco(pessoasComEnderecos);
+        if (gArquivos.gravarPessoaComEndereco(pessoasComEnderecos)) {
+            System.out.println("Arquivo gravado com sucesso!");
+        } else {
+            System.out.println("Falha ao gravar o arquivo.");
+        }
     }
 }

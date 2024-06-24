@@ -15,7 +15,7 @@ public class GerenciadorDeArquivos {
 
     private String header = "";
     private String pessoas = "C:\\Users\\autologon\\Documents\\GitHub\\Simulado\\simulado\\src\\br\\edu\\up\\Pessoas.csv";
-    private String enderecos = "C:\\Users\\autologon\\Documents\\GitHub\\Simulado\\simulado\\src\\br\\edu\\up\\Endercos.csv";
+    private String enderecos = "C:\\Users\\autologon\\Documents\\GitHub\\Simulado\\simulado\\src\\br\\edu\\up\\Enderecos.csv";
     private String pessoaComEndereco = "C:\\Users\\autologon\\Documents\\GitHub\\Simulado\\simulado\\src\\br\\edu\\up\\PessoaComEndereco.csv";
 
     public List<Pessoa> getPessoas() {
@@ -76,8 +76,8 @@ public class GerenciadorDeArquivos {
 
     public List<Pessoa> combinarPessoasEEnderecos() {
 
-        List<Pessoa> listaDePessoas = new ArrayList<>();
-        List<Pessoa> listaDeEnderecos = new ArrayList<>();
+        List<Pessoa> listaDePessoas = getPessoas();
+        List<Pessoa> listaDeEnderecos = lerEnderecos();
 
         for (Pessoa pessoa : listaDePessoas) {
             for (Pessoa endereco : listaDeEnderecos) {
